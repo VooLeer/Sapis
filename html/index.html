@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Опрос</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script type="text/javascript" src="../js/script.js" defer></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+	        <h1>Выставка смартфонов</h1>
+   		 </header>
+   		<article class="main">
+        	<form id="form">
+        		 <fieldset align="center">
+                <legend>Ваши данные</legend>
+                <div>
+                    Введите имя:
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    Введите дату посещения:
+                    <input type="week" name="week" id="week">
+                </div>
+            </fieldset>
+
+           <fieldset align="center">
+               <legend>Информация о Вас</legend>
+               <div>
+                   У вас уже есть смартфон?
+                   <input type="checkbox" id="smartphone_availability">
+               </div>             
+           </fieldset>
+
+            <fieldset align="center">
+                <legend>Предпочтения посетителя</legend>
+                <div>
+                    <label>                       	
+	                  	<select id="phones" name="phones">
+	                  	  <option value="Выберите понравившуюся модель">Выберите понравившуюся модель</option>
+						  <option value="Xiaomi">Xiaomi Redmi Note12</option>
+						  <option value="Samsung">Samsung A20</option>
+						  <option value="Huawei">Huawei A200</option>
+						  <option value="Nokia">Nokia T21</option>
+						</select>
+                    </label>
+                </div>
+                <div>
+                   Выберите понравившийся цвет смартфона:
+                   <input type="color" id="interior">
+               	</div>
+                <div>
+                    <br>
+                    Часто ли Вы покупаете новый смартфон?
+                    <p><input id="r1" name="sharp" type="radio" value="Часто">Часто</p>
+                    <p><input id="r2" name="sharp" type="radio" value="Редко">Редко</p>
+                    <p><input id="r3" name="sharp" type="radio" value="Очень редко" checked>Очень редко</p>
+                </div>
+                <div>
+                    Оцените выставку:<br>
+                    <input type="range" id="exhibition" min="0" max="10">
+                </div>
+            </fieldset>
+
+            <fieldset align="center" class="buttons">
+                <button name="send" type="button" onclick="validate()">Отправить</button>
+                <button name="clear" type="reset">Очистить</button>
+            </fieldset>
+        	</form>
+        </article>
+        <nav id="nav">
+        	<button name="send" type="button" disabled>Главная</button>
+        	<br><br>
+        	<button name="send" type="button" onclick="ShowAll()">Результаты</button>
+    	</nav>
+    	<aside>
+    		<p>Ежегодная выставка смартфонов разных брендов привлекла большое количество посетителей.</p>
+    	</aside>
+	    <footer class="footer">
+    	    <p class="p1">Минск, 2021<br>ул. Я. Коласа, 28</p>
+    	</footer>
+	</div>
+</body>
+</html>
